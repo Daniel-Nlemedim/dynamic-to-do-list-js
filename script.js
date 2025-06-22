@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(taskText === '') {
             alert('Please enter a task.');
             return;
-        }
-        else{
+        } else {
             const removeButton = document.createElement('button');
             const newTask = document.createElement('li');
             newTask.textContent = taskText;
@@ -32,5 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if(event.key === 'Enter'){
             addTask();
         }
-    })
-})
+    });
+    document.addEventListener('DOMContentLoaded', addTask);
+});
