@@ -44,4 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
             addTask();
         }
     });
+
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.forEach(task => {
+        taskInput.value = task;
+        addTask();
+    });
 });
